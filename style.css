@@ -2,6 +2,103 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background-color: rgb(53, 53, 53);
+  width: 100vh;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 html {
-  font-size: 10px;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 600vmin;
+  max-width: 600px;
+  height: 600vmin;
+  max-height: 600px;
+  border: 0.5rem solid black;
+}
+
+.grid-items {
+  border: 0.1rem solid gray;
+  font-size: 2rem;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-items:hover {
+  background-color: grey;
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+.grid-items:active {
+  background-color: blue;
+}
+
+#box3,
+#box7,
+#box10,
+#box11,
+#box12,
+#box15 {
+  border-left: 0.5rem solid black;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box8,
+#box9,
+#box10,
+#box11 {
+  border-bottom: 0.5rem solid black;
+}
+
+.prompt {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 0.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.answer {
+  width: 50%;
+  height: 50%;
+
+  font-size: 2rem;
+  text-align: center;
+
+  border: none;
+
+  background-color: transparent;
+}
+
+.special {
+  border: none;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 475px) {
+  html {
+    font-size: 20px;
+  }
+
+  .grid {
+    width: 60vmin;
+    height: 60vmin;
+  }
 }
